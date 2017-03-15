@@ -18,36 +18,34 @@ function createTemplate(data){
    var date= data.date;
    var content= data.content;
   
-        var htmlTemplate='
-         <html>
-            <head>
-                <title>
-                    ${title}
-                </title>
-                <style>
-                 <link href="/ui/style.css" rel="stylesheet" />
-                </style>
-            </head>
-            
-            
-            <body>
-               <div class="container">
-                <div>
-                    <a href='/'>Home</a>
-                </div>
-                <h2>
-                    ${heading}
-                </h2>
-                <div>
-                    ${date}
-                </div>
-                <div>
-                    <p>${content}</p>
-                </div>
-              </div>  
-            </body>
-        </html>
-        ';
+        var htmlTemplate= `
+             <html>
+                <head>
+                    <title>
+                        ${title}
+                    </title>
+                    <style>
+                     <link href="/ui/style.css" rel="stylesheet" />
+                    </style>
+                </head>
+                <body>
+                   <div class="container">
+                    <div>
+                        <a href='/'>Home</a>
+                    </div>
+                    <h2>
+                        ${heading}
+                    </h2>
+                    <div>
+                        ${date}
+                    </div>
+                    <div>
+                        <p>${content}</p>
+                    </div>
+                  </div>  
+                </body>
+            </html>
+        `;
     return htmlTemplate;
 }
 app.get('/', function (req, res) {
